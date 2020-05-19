@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+.Page-display-container {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.Page-display-logo {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.Logo-top-line {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.Logo-top-number {
+    color: #c43a31;
+}
+
+.Logo-bottom-line {
+    margin: 0;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.Page-display-content {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Global-stats-container {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.Global-caption {
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0px 50px 0px 0px;
+    float: left;
+}
+
+.Global-single-stat {
+    display: inline-block;
+    margin-right: 50px;  
+}
+
+.Global-single-caption {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: lighter;
+}
+
+.Global-single-value {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Divider-line {
+    border-width: 0.5px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+.Page-buttons-row {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.Page-refresh-button {
+    border: 0.5px solid #ffffff;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    float: left;    
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-left: 25px;   
+}
+
+.Countries-stats-container { 
+    margin-top: 20px;
+    float: left;
+    width: 900px;
+}
+
+.Countries-search-input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin-right: 25px;
+    border-radius: 15px;
+    background-color: #000000;
+    float: left;
+    color: #ffffff;
+}
+
+.Countries-search-input::placeholder {
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+}
+
+.Countries-search-input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin-right: 25px;
+    height: 30px;
+    padding: 0px;
+    padding-left: 10px;
+    border: 0.5px solid #ffffff;
+    width: 300px;
+}
+
+.Countries-search-button {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    float: left;    
+    border: none;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    border-radius: 10px;
+    background-color:rgba(255,255,255,0.2);
+}
+   
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+}
+
+.Countries-stats-caption {
+    font-weight: bolder;
+    font-size: 50px;
+    margin: 0;
+}
+
+.Countries-table-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    background-color: #000000;
+    color:#fff;
+}
+
+.Countries-table-header tr {
+    display: block;
+}
+
+.Countries-header-item:first-of-type {
+    width: 315px;
+}
+
+.Countries-header-item {
+    padding: 5px 0px 5px 0px;
+    text-align: left;
+    min-width: 190px;
+    border-spacing: 0px;
+}
+
+.Countries-table-body {
+    margin: 0;
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: 325px;
+}
+
+.Countries-stats-table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.Countries-table-header {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.Countries-table-item {
+    min-width: 190px;
+    padding: 5px 0px 5px 0px;
+    font-size: 20px;
+    margin: 0;
+    border-spacing: 0px;
+}
+
+.Countries-table-item:first-of-type {
+    width: 315px;
+}
+
+.Table-error-message {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.Table-error-row {
+    width: 900px;
+    
+}
+
+.Countries-modal-container {
+    height: 325px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: 0.5px solid #ffffff;
+    border-radius: 15px;
+    float: left;
+}
+
+.Modal-figure-caption {
+    font-weight: lighter;
+    font-size: 16px;
+    margin: 0;
+    max-width: 250px;
+}
+
+.Modal-figure-country {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.Modal-figure-value, .Modal-figure-country {
+    max-width: 250px;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.Modal-figure-value {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.Country-data {
+    margin-left: 25px;
+    margin-top: 25px;
+    max-width: 250px;
+    float: left;
+    margin-right: 25px;
+}
+
+.CloseIcon {
+    width: 24px;
+    height: 24px;
+    margin: 25px 25px 0px 0px;
+    float: right;
+}
+
+.Countries-modal-chart {
+    margin-top: 12.5px;
+    float: left;
+    width: 535px;
+}
+
+.Countries-victory-chart {
+    
+}
