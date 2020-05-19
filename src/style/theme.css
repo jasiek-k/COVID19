@@ -41,6 +41,14 @@ body {
     margin-right: auto;
 }
 
+.Page-display-error {
+    color: #c43a31;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 125px;
+    text-align: center;
+}
+
 .Global-stats-container {
     float: left;
     margin-bottom: 20px;
@@ -49,6 +57,7 @@ body {
 .Global-caption {
     font-size: 50px;
     font-weight: bolder;
+    color: #ffffff;
     margin: 0px 50px 0px 0px;
     float: left;
 }
@@ -85,9 +94,9 @@ body {
 }
 
 .Page-refresh-button {
-    border: 0.5px solid #ffffff;
-    color: #ffffff;
-    background-color: #000000;
+    border: 0.5px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     text-decoration: none;
@@ -96,6 +105,8 @@ body {
     border-radius: 15px;
     font-size: 16px;
     margin-left: 25px;   
+    -webkit-transition-duration: 0.6s; 
+    transition-duration: 0.6s;
 }
 
 .Countries-stats-container { 
@@ -141,6 +152,15 @@ body {
     padding: 5px 20px 5px 20px;
     border-radius: 15px;
     font-size: 16px;
+    -webkit-transition-duration: 0.6s; 
+    transition-duration: 0.6s;
+}
+
+.Countries-search-button:hover, .Page-refresh-button:hover { 
+    color: #ffffff;
+    background-color: black;
+    border: 0.5px solid #ffffff;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -154,16 +174,18 @@ body {
 }
    
 ::-webkit-scrollbar-thumb {
-    background: white; 
+    background: #ffffff; 
     border-radius: 10px;
     width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: grey; 
+    cursor: pointer;
 }
 
 .Countries-stats-caption {
+    color: #ffffff;
     font-weight: bolder;
     font-size: 50px;
     margin: 0;
@@ -224,27 +246,24 @@ body {
     width: 315px;
 }
 
-.Table-error-message {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bolder;
-    padding-top: 100px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.Countries-table-item:first-of-type:hover {
+    cursor: pointer;
 }
 
-.Table-error-row {
+.Table-error-message {
+    color: #c43a31;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 100px;
     width: 900px;
-    
+    text-align: center;
 }
 
 .Countries-modal-container {
     height: 325px;
     width: 100%;
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
+    background-color: #000000;
     border: 0.5px solid #ffffff;
     border-radius: 15px;
     float: left;
@@ -288,12 +307,16 @@ body {
     float: right;
 }
 
+.CloseIcon:hover {
+    cursor: pointer;
+}
+
 .Countries-modal-chart {
     margin-top: 12.5px;
     float: left;
     width: 535px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    padding-left: 20px;
 }
 
-.Countries-victory-chart {
-    
-}

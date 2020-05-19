@@ -27,7 +27,7 @@ export default class CountriesStatistics extends React.Component {
                                         <td className="Countries-table-item">{item.TotalRecovered}</td>
                                     </tr>
                             })) : (
-                                <tr className="Table-error-row">
+                                <tr>
                                     <td className="Table-error-message">
                                         No matching countries found. Try again.
                                     </td>

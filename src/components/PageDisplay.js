@@ -27,19 +27,12 @@ export default class PageDisplay extends React.Component {
     getContent = () => {
       axios.get(`https://api.covid19api.com/summary`)
         .then(res => {
-          //let status = 420
           if (res.status === 200) {
-          //if (status === 200) {
             const content = res.data;
             this.setState({ 
               global: {...content.Global},
               countries: [...content.Countries],
-              displayedCountries: [...content.Countries]
-            })
-          } else {
-            console.log("zjebalo sie")
-            this.setState({
-              error: 'An error occured. Refresh the page.'
+              //displayedCountries: [...content.Countries]
             })
           }
       })
@@ -53,6 +46,7 @@ export default class PageDisplay extends React.Component {
 
     searchForCountries = e => {
       e.preventDefault()
+  
       const countriesArray = [...this.state.countries]
       const searchInput = this.state.searchInput
       let countriesToDisplay = []
@@ -73,6 +67,7 @@ export default class PageDisplay extends React.Component {
     displayModal = e => {
       const countriesArray = [...this.state.countries]
       let clonedCountry = {}
+
       for (let i = 0; i < countriesArray.length; i++) {
         if (e.target.innerText === countriesArray[i].Country) {
           clonedCountry = Object.assign({}, countriesArray[i])
@@ -85,12 +80,7 @@ export default class PageDisplay extends React.Component {
             this.setState({
               modalContent: { country: clonedCountry, data: content}
             })
-          } else {
-            let message = 'An error occured. Refresh the page.'
-            this.setState({
-              error: message
-            })
-          }
+          } 
       })     
     }
 
@@ -117,11 +107,11 @@ export default class PageDisplay extends React.Component {
         <div className="Page-display-container">
           <div className="Page-display-logo">
             <p className="Logo-top-line">COVID
-                <span className="Logo-top-number">19
-                </span>
-              </p>
-              <p className="Logo-bottom-line">STATISTICS</p>
-            </div>
+              <span className="Logo-top-number">19
+              </span>
+            </p>
+            <p className="Logo-bottom-line">STATISTICS</p>
+          </div>
             <div className="Page-display-content">
               {
                 [...this.state.countries].length !== 0 ? (
@@ -129,26 +119,29 @@ export default class PageDisplay extends React.Component {
                     <GlobalStatistics globalStatsContent={{...this.state.global}}/>
                     <hr className="Divider-line"/>
                     <div className="Countries-stats-container">
-                    <p className="Countries-stats-caption">#COUNTRIES</p>
+                      <p className="Countries-stats-caption">#COUNTRIES</p>
                       <div className="Page-buttons-row">
-                      <form className="Countries-search-form" onSubmit={this.searchForCountries}>
-                        <input  className="Countries-search-input" id="Countries-search-input" onChange={this.updateSearchForm} 
-                                type="text" placeholder='Find your country'></input>
-                        <button className="Countries-search-button"  type="submit">SEARCH</button>
-                      </form> 
-                      <button className="Page-refresh-button" onClick={this.refreshSearching}>REFRESH</button>
-                    </div>
-                    {
-                      Object.keys(this.state.modalContent).length !== 0 ? (
-                      <CountriesModal closeModal={this.closeModal} modalContent={{...this.state.modalContent}}/>
-                        ) : (
-                          <CountriesStatistics displayModal={this.displayModal} countriesStatsContent={[...this.state.displayedCountries]}/>                   
-                        )
-                    } 
+                        <form className="Countries-search-form" onSubmit={this.searchForCountries}>
+                          <input  className="Countries-search-input" id="Countries-search-input" 
+                                  onChange={this.updateSearchForm} type="text" 
+                                  placeholder='Find your country'></input>
+                          <button className="Countries-search-button"  type="submit">SEARCH</button>
+                        </form> 
+                        <button className="Page-refresh-button" onClick={this.refreshSearching}>REFRESH</button>
+                      </div>
+                      {
+                        Object.keys(this.state.modalContent).length !== 0 ? (
+                        <CountriesModal closeModal={this.closeModal} 
+                                        modalContent={{...this.state.modalContent}}/>
+                          ) : (
+                            <CountriesStatistics displayModal={this.displayModal} 
+                              countriesStatsContent={[...this.state.displayedCountries]}/>                   
+                          )
+                      } 
                     </div> 
                   </React.Fragment>
                 ) : (
-                  <p className="Page-display-error">{this.state.error}</p>
+                  <p className="Page-display-error">An error occured. Refresh the page.</p>
                 )
               }
             </div>            
