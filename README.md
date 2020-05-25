@@ -1,6 +1,11 @@
 # COVID19
+
+
 English version below.
 [PL] ---------------------------------------------------------------------------
+Wypróbuj to na Netlify:
+https://covid-task.netlify.app/
+
 Aplikacja przedstawiająca statystyki na temat zachorowań na COVID-19.
 
 Aby uruchomić aplikację na świeżym komputerze:
@@ -14,6 +19,9 @@ Aby uruchomić aplikację na świeżym komputerze:
     npm start
 
 [EN] ---------------------------------------------------------------------------
+Check this out on Netlify >
+https://covid-task.netlify.app/
+
 Application displaying statistics about spreading of COVID-19.
 
 To run this app on clean computer:

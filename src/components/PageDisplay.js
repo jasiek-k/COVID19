@@ -51,10 +51,10 @@ export default class PageDisplay extends React.Component {
     const countriesToDisplay = []
 
     for (let i = 0; i < countriesArray.length; i++) {
-      if (countriesArray[i].Country.toLowerCase().
-          includes(searchInput.toLowerCase()) ||
-      searchInput.toLowerCase().
-          includes(countriesArray[i].Country.toLowerCase())) {
+      if (countriesArray[i].Country.toLowerCase()
+          .includes(searchInput.toLowerCase()) ||
+      searchInput.toLowerCase()
+          .includes(countriesArray[i].Country.toLowerCase())) {
         countriesToDisplay.push(countriesArray[i])
       }
     }
