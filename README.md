@@ -1,6 +1,5 @@
 # COVID19
 
-
 English version below.
 [PL] ---------------------------------------------------------------------------
 Wypróbuj to na Netlify:

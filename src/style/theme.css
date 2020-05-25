@@ -275,6 +275,9 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-left: 15px;
+    float: right;
+    margin-right: 55px;
+    margin-top: 2px;
 }
 
 .Modal-caption-row {
