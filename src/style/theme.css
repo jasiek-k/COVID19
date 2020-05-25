@@ -148,7 +148,7 @@ body {
     font-weight: normal;
     text-decoration: none;
     float: left;    
-    border: none;
+    border: 0.5px solid #000000;
     padding: 5px 20px 5px 20px;
     border-radius: 15px;
     font-size: 16px;
@@ -214,9 +214,9 @@ body {
     border-spacing: 0px;
 }
 
-.Countries-table-body {
+.Countries-table-body, .Countries-list-container {
     margin: 0;
-    display:block;
+    display: block;
     width: 100%;
     overflow: auto;
     height: 325px;
@@ -269,11 +269,25 @@ body {
     float: left;
 }
 
+.Modal-color-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.Modal-caption-row {
+    display: inline;
+    margin: 0;
+}
+
 .Modal-figure-caption {
     font-weight: lighter;
     font-size: 16px;
     margin: 0;
     max-width: 250px;
+    display: inline;
 }
 
 .Modal-figure-country {
@@ -295,9 +309,9 @@ body {
 .Country-data {
     margin-left: 25px;
     margin-top: 25px;
-    max-width: 250px;
+    width: 250px;
     float: left;
-    margin-right: 25px;
+    margin-right: 0px;
 }
 
 .CloseIcon {
@@ -320,3 +334,42 @@ body {
     padding-left: 20px;
 }
 
+.Countries-list-container {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.Countries-list-item {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 5px 0px 5px 5px;
+}
+
+.Countries-list-item:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.Page-switch-button {
+    border: 0.5px solid #ffffff;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    float: left;    
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-left: 25px;   
+    -webkit-transition-duration: 0.6s; 
+    transition-duration: 0.6s;
+}
+
+.Page-switch-button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+}
