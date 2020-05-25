@@ -42,7 +42,7 @@ export default class CountriesModal extends React.Component {
 
     const chartArray = [
       {data: confirmedData, color: '#c43a31'},
-      {data: deathsData, color: '#ffffff'},
+      {data: deathsData, color: '#373F47'},
       {data: recoveredData, color: '#808080'}
     ]
     const figuresArray = [

@@ -77,6 +77,7 @@ export default class PageDisplay extends React.Component {
             })
           }
         })
+    document.getElementById('Page-switch-button').style.display = 'none'
   }
 
   refreshSearching = () => {
@@ -88,6 +89,7 @@ export default class PageDisplay extends React.Component {
   }
 
   closeModal = () => {
+    document.getElementById('Page-switch-button').style.display = 'block'
     this.setState({
       modalContent: {}
     })
@@ -139,6 +141,7 @@ export default class PageDisplay extends React.Component {
                           REFRESH
                       </button>
                       <button className="Page-switch-button"
+                        id="Page-switch-button"
                         onClick={this.changeDisplay}>
                         {
                           this.state.ifStats ? (
